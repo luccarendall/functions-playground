@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(one, two) {
-return one && two;
+  return one && two;
 }
 
 // Desafio 2
@@ -14,18 +14,29 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = array[0];
+  let repeat = 1;
+  for (let i = 1; i < array.length; i += 1) {
+    if (maior === array[i]) {
+      repeat += 1;
+    }
+    if (maior < array[i]) {
+      maior = array[i];
+      repeat = 1;
+    }
+  }
+  return repeat;
 }
 
 // Desafio 7
@@ -42,6 +53,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
