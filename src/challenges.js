@@ -40,13 +40,23 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1d = Math.abs(mouse - cat1);
+  let cat2d = Math.abs(mouse - cat2);
+  if (cat1d < cat2d) return 'cat1';
+  if (cat1d > cat2d) return 'cat2';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  const result = numbers.map((number) => {
+    if (number % 15 === 0) return 'fizzBuzz';
+    if (number % 3 === 0) return 'fizz';
+    if (number % 5 === 0) return 'buzz';
+    return 'bug!';
+  });
+  return result;
 }
 
 // Desafio 9
